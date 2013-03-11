@@ -6,6 +6,8 @@ import codecs
 import logging
 import sys
 
+from dataerror import DataError
+
 logging.basicConfig(level=logging.INFO)
 
 
@@ -71,7 +73,7 @@ def processInput(inputFile):
 
 
 def cleanupWithFinally():
-    # Useing finally
+    # Using finally
     inputFile = codecs.open('some.txt', 'r', 'utf-8')
     try:
         processInput(inputFile)
@@ -111,82 +113,6 @@ def cleanupWithClosing():
             for row in customerCursor('select * from customers'):
                 print row
 
-import socket
-
-
-class SocketClient():
-    '''Provide a ``socket`` and automatically close it when done.'''
-    def __init__(self, host, port):
-        self.host = host
-        self.port = port
-
-    def __enter__(self):
-        '''Acquire resources needed inside ``with`` statement.'''
-        self.socket = socket.create_connection((self.host, self.port))
-        return self
-
-    def __exit__(self, type, value, traceback):
-        '''Release resources acquired by `__enter__()`.'''
-        self.socket.shutdown(socket.SHUT_RDWR)
-        self.socket.close()
-
-
-def useSocketClient():
-    with SocketClient('www.python.org', 80) as pythonOrg:
-        pythonOrg.socket.sendall(
-            'GET /index.html HTTP/1.0\n'
-            + 'Host: www.python.org\n'
-            + '\n')
-        reply = pythonOrg.socket.recv(64)
-        print('%r' % reply)
-
-
-class DataError(ValueError):
-    '''Error occurred during processing data.'''
-    def __init__(self, filePath, line=None, column=None):
-        assert filePath is not None
-        self._filePath = filePath
-        self._line = line
-        self._column = column
-
-    @property
-    def filePath(self):
-        return self._filePath
-
-    @property
-    def line(self):
-        return self._line
-
-    @property
-    def column(self):
-        return self._column
-
-    def __unicode__(self):
-        result = u"" + os.path.basename(self.filePath)
-        if self.line is not None:
-            result += u' (%d' % self.line
-            if self.column is not None:
-                result += u':%d' % self.column
-            result += u')'
-        return result
-
-    def __str__(self):
-        return unicode(self).encode('utf-8')
-
-    def __repr__(self):
-        return self.__str__()
-
-    def __cmp__(self, other):
-        assert other is not None
-        if self.filePath == other.filePath:
-            if self.line == other.line:
-                result = cmp(self.column, other.column)
-            else:
-                result = cmp(self.line, other.line)
-        else:
-            result = cmp(self.filePath, other.filePath)
-        return result
-
 
 def processAllThingsPossiblyRaisingDataError(dataFile):
     assert dataFile is not None
@@ -198,19 +124,6 @@ def processAllThingsPossiblyRaisingDataError(dataFile):
             processSomething(long(line))
     except ValueError as error:
         raise DataError(dataFile.name, lineNumber, error)
-
-
-def processAllThingsPossiblyRaisingChainedDataError(dataFile):
-    assert dataFile is not None
-
-    lineNumber = 1
-    try:
-        # Process all heights read from `dataFile`.
-        for lineNumber, line in enumerate(dataFile, start=1):
-            processSomething(long(line))
-    except ValueError as error:
-        raise DataError(dataFile.name, lineNumber, error) \
-            from error
 
 
 def handleExceptionByLogging():
@@ -247,5 +160,3 @@ if __name__ == '__main__':
         logging.info(u'handled error: %s', error)
 
     reportExampleError()
-
-    useSocketClient()
