@@ -11,6 +11,9 @@ class DataErrorSimple(Exception):
     '''
     pass
 
+def testRaiseDataErrorSimple():
+    height = -3
+    raise DataErrorSimple('height is %d but must be greater than 0' % height)
 
 class DataError(Exception):
     '''

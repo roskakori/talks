@@ -74,7 +74,7 @@ def main(arguments=None):
         arguments = sys.argv
 
     # Exit code: 0=success, >0=error.
-    result = 1
+    exitCode = 1
 
     # Process arguments. In case of errors, report them and exit.
     parser = optparse.OptionParser(usage='process some report')
@@ -87,14 +87,14 @@ def main(arguments=None):
 
     try:
         _process(options, others)
-        result = 0  # Success!
+        exitCode = 0  # Success!
     except KeyboardInterrupt:
         _log.error('stopped as requested by user')
     except (DataError, EnvironmentError) as error:
         _log.error(error)
     except Exception as error:
         _log.exception(error)
-    return result
+    return exitCode
 
 
 if __name__ == "__main__":

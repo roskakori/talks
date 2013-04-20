@@ -7,16 +7,14 @@ import socket
 class SocketClient():
     '''Provide a ``socket`` and automatically close it when done.'''
     def __init__(self, host, port):
-        self.host = host
-        self.port = port
+        self.socket = socket.create_connection((host, port))
 
     def __enter__(self):
-        '''Acquire resources needed inside ``with`` statement.'''
-        self.socket = socket.create_connection((self.host, self.port))
+        '''Value ``with`` statement should assign to its target variable.'''
         return self
 
     def __exit__(self, type, value, traceback):
-        '''Release resources acquired by `__enter__()`.'''
+        '''Release resources acquired by `__init__()`.'''
         self.socket.shutdown(socket.SHUT_RDWR)
         self.socket.close()
 
