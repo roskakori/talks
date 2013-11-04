@@ -34,3 +34,6 @@ nosetests.xml
 
 # Eclipse
 .settings
+pygraz/readwrite/wetterbericht.txt
+pygraz/readwrite/data.bin
+.DS_Store
