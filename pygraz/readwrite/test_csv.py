@@ -28,18 +28,29 @@ def readAndValidateCsv():
     import csv
     import datetime
 
+    EXPECTED_COLUMN_COUNT = 4
+
     sourceCsvPath = 'personen.csv'
+    rowNumber = 0
+    columnNumber = 0
+    row = None
     with open(sourceCsvPath, 'r', encoding='utf-8') as sourceCsvFile:
         csvReader = csv.reader(sourceCsvFile, delimiter=';')
-        for rowNumber, row in enumerate(csvReader, start=1):
-            if len(row) != 3:
-                message = 'row {} in CSV file {} must have 4 columns but is: {}'.format(
-                    rowNumber, sourceCsvPath, row)
-                raise ValueError(message)
-            firstName, surName, dateOfBirthText, weightText = row
-            dateOfBirth = datetime.datetime.strptime(dateOfBirthText, '%Y-%m-%d')
-            weight = float(weightText)
-            print(firstName, surName, dateOfBirth, weight)
+        try:
+            for rowNumber, row in enumerate(csvReader, start=1):
+                if rowNumber > 1:  # Skip header row.
+                    columnNumber = 1
+                    if len(row) != EXPECTED_COLUMN_COUNT:
+                        raise ValueError('row must have {} columns but is: {}'.format(
+                                EXPECTED_COLUMN_COUNT, row))
+                    firstName, surName, dateOfBirthText, weightText = row
+                    columnNumber = 3
+                    dateOfBirth = datetime.datetime.strptime(dateOfBirthText, '%Y-%m-%d')
+                    columnNumber = 4
+                    weight = float(weightText)
+                    print(firstName, surName, dateOfBirth, weight)
+        except ValueError as error:
+            raise ValueError('{} ({}, {}): {}'.format(sourceCsvPath, rowNumber, columnNumber, error))
 
 
 class CsvTest(unittest.TestCase):
