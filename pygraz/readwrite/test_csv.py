@@ -24,9 +24,19 @@ def readCsv():
             print(row)
 
 
+def convertRowToNative():
+    row = ['Paul', 'Müller', '1967-05-18', '64.8']
+
+    weight = float(row[3])
+
+    from datetime import datetime
+    dateOfBirth = datetime.strptime(row[2], '%Y-%m-%d')
+    # format: %Y = YYYY, %m=MM, %d=DD
+    
+    
 def readAndValidateCsv():
     import csv
-    import datetime
+    from datetime import datetime
 
     EXPECTED_COLUMN_COUNT = 4
 
@@ -45,7 +55,7 @@ def readAndValidateCsv():
                                 EXPECTED_COLUMN_COUNT, row))
                     firstName, surName, dateOfBirthText, weightText = row
                     columnNumber = 3
-                    dateOfBirth = datetime.datetime.strptime(dateOfBirthText, '%Y-%m-%d')
+                    dateOfBirth = datetime.strptime(dateOfBirthText, '%Y-%m-%d')
                     columnNumber = 4
                     weight = float(weightText)
                     print(firstName, surName, dateOfBirth, weight)
@@ -57,6 +67,7 @@ class CsvTest(unittest.TestCase):
     def testCanWriteAndReadCsv(self):
         writeCsv()
         readCsv()
+        convertRowToNative()
         readAndValidateCsv()
 
 
