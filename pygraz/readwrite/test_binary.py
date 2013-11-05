@@ -36,13 +36,9 @@ def readBinaryWithBreak():
 
     
 class BinaryTest(unittest.TestCase):
-    def testCanWriteBinary(self):
+    def testCanWriteAndReadBinary(self):
         writeBinary()
-
-    def testCanReadBinary(self):
         readBinary()
-
-    def testCanReadBinaryWithBreak(self):
         readBinaryWithBreak()
 
 

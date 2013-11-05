@@ -22,24 +22,19 @@ def readText():
 
 
 def readTextWithLineNumbers():
-    lineNumber = 0
     sourcePath = 'wetterbericht.txt'
+    lineNumber = 0
     with open(sourcePath, 'r', encoding='utf-8') as sourceFile:
         for lineNumber, line in enumerate(sourceFile, start=1):
             line = line.rstrip('\n\r')  # Remove trailing linefeed characters
-            print('%(lineNumber)d: %(line)s' %
-                  {'lineNumber': lineNumber, 'line': line})
-    print('{0} line(s) read'.format(lineNumber))
+            print('{}: {}'.format(lineNumber, line))
+    print('{} line(s) read'.format(lineNumber))
 
 
 class TextTest(unittest.TestCase):
-    def testCanWriteText(self):
+    def testCanWriteAndReadText(self):
         writeText()
-
-    def testCanReadText(self):
         readText()
-
-    def testCanReadTextWithLineNumbers(self):
         readTextWithLineNumbers()
 
 

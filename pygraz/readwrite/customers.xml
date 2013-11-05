@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customers>
+  <customer number="1">
+     <firstname>Josef</firstname>
+     <surname>Huber</surname>
+     <dateofbirth>1981-02-27</dateofbirth>
+  </customer>
+  <customer number="2">
+     <firstname>Paul</firstname>
+     <surname>Müller</surname>
+     <dateofbirth>1967-05-18</dateofbirth>
+  </customer>
+  <customer number="3">
+     <firstname>Maria</firstname>
+     <surname>Schäfer</surname>
+     <dateofbirth>1976-10-08</dateofbirth>
+  </customer>
+</customers>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<crm:customers xmlns:crm="http://www.example.com/crm">
+  <crm:customer number="1">
+     <crm:firstname>Josef</crm:firstname>
+     <crm:surname>Huber</crm:surname>
+     <crm:dateofbirth>1981-02-27</crm:dateofbirth>
+  </crm:customer>
+  <crm:customer number="2">
+     <crm:firstname>Paul</crm:firstname>
+     <crm:surname>Müller</crm:surname>
+     <crm:dateofbirth>1967-05-18</crm:dateofbirth>
+  </crm:customer>
+  <crm:customer number="3">
+     <crm:firstname>Maria</crm:firstname>
+     <crm:surname>Schäfer</crm:surname>
+     <crm:dateofbirth>1976-10-08</crm:dateofbirth>
+  </crm:customer>
+</crm:customers>
