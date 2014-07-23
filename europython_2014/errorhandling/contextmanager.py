@@ -6,8 +6,6 @@ import os
 
 class CopyTask():
     def __init__(self, source_path, target_path):
-        self.source_path = source_path
-        self.target_path = target_path
         self._source_file = None
         self._target_file = None
 
@@ -30,11 +28,11 @@ class CopyTask():
     def close(self):
         """Release resources acquired by `__init__()`."""
         if self._target_file is not None:
-            print('  close target %s' % self.target_path)
+            print('  close target %s' % self._target_file.name)
             self._target_file.close()
             self._target_file = None
         if self._source_file is not None:
-            print('  close source %s' % self.source_path)
+            print('  close source %s' % self._source_file.name)
             self._source_file.close()
             self._source_file = None
 
@@ -52,8 +50,6 @@ class NaiveCopyTask():
     cleanup properly if error happen during `__init__()`.
     """
     def __init__(self, source_path, target_path):
-        self.source_path = source_path
-        self.target_path = target_path
         print('  open source %s' % source_path)
         self._source_file = open(source_path, 'rb')
         print('  open target %s' % target_path)
@@ -68,9 +64,9 @@ class NaiveCopyTask():
 
     def close(self):
         """Release resources acquired by `__init__()`."""
-        print('  close target %s' % self.target_path)
+        print('  close target %s' % self._target_file.name)
         self._target_file.close()
-        print('  close source %s' % self.source_path)
+        print('  close source %s' % self._source_file.name)
         self._source_file.close()
 
     def __enter__(self):
