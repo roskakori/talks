@@ -1,3 +1,8 @@
+# Various talk dependant files
+europython_2014/errorhandling/copy_of_some.txt
+europython_2014/errorhandling/some.txt
+
+# Python byte code
 *.py[cod]
 
 # C extensions
@@ -40,3 +45,6 @@ nosetests.xml
 
 # Mac OS X
 .DS_Store
+
+# LibreOffice locks
+.~lock.*
