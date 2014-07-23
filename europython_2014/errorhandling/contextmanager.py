@@ -52,6 +52,8 @@ class NaiveCopyTask():
     cleanup properly if error happen during `__init__()`.
     """
     def __init__(self, source_path, target_path):
+        self.source_path = source_path
+        self.target_path = target_path
         print('  open source %s' % source_path)
         self._source_file = open(source_path, 'rb')
         print('  open target %s' % target_path)
@@ -70,6 +72,13 @@ class NaiveCopyTask():
         self._target_file.close()
         print('  close source %s' % self.source_path)
         self._source_file.close()
+
+    def __enter__(self):
+        """Value ``with`` statement should assign to its target variable."""
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.close()
 
 
 if __name__ == '__main__':
@@ -108,8 +117,15 @@ if __name__ == '__main__':
     except IOError as error:
         print('as expected: cannot copy %s to %s: %s' % (source_path, target_path, error))
 
-    print('example for naive CopyTask (without proper cleanup in case of error')
+    print('example for naive CopyTask (without proper cleanup in case of error using try/finally')
     source_path = 'some.txt'
     target_path = 'copy_of_some.txt'
-    with CopyTask(source_path, target_path) as naive_copy_task:
+    naive_copy_task = NaiveCopyTask(source_path, target_path)
+    try:
+        naive_copy_task.run()
+    finally:
+        naive_copy_task.close()
+
+    print('example for naive CopyTask (without proper cleanup in case of error')
+    with NaiveCopyTask(source_path, target_path) as naive_copy_task:
         naive_copy_task.run()
