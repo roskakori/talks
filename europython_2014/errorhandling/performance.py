@@ -1,22 +1,30 @@
-'''
+"""
 Test performance of various error handling mechanisms.
-'''
+"""
+import random
+import string
 import time
 
-VALID_NAME = 'bob'
-NAME_TO_PHONE_MAP = {
-    'alice': '0664/12345678',
-    VALID_NAME: '0699/87654321',
-    'joe': '0650/23456789',
-    'sue': '0316/13245768'
-}
+
+def _name_to_number_map():
+    result = {}
+    random.seed(0)
+    for _ in range(10):
+        name = ''.join([
+            random.choice(string.ascii_lowercase) for _ in range(10, random.randint(10, 20))
+        ])
+        result[name] = random.randint(0, 999999)
+    return result
+
+NAME_TO_PHONE_MAP = _name_to_number_map()
+VALID_NAME = list(NAME_TO_PHONE_MAP.keys())[0]
 
 MISSING_NAME = 'no such name'
 REPETITIONS = 10000000
 FAIL_EACH = 10
 
 
-def nameForStep(step):
+def name_for_step(step):
     if step % FAIL_EACH == 0:
         result = MISSING_NAME
     else:
@@ -24,33 +32,33 @@ def nameForStep(step):
     return result
 
 
-def timeForKeyError():
+def time_for_key_error():
     startTime = time.clock()
-    for step in xrange(REPETITIONS):
+    for step in range(REPETITIONS):
         try:
-            x = NAME_TO_PHONE_MAP[nameForStep(step)]
+            x = NAME_TO_PHONE_MAP[name_for_step(step)]
         except KeyError:
             x = 'no number'
     return time.clock() - startTime
 
 
-def timeForNoneHandler():
+def time_for_none_handler():
     startTime = time.clock()
-    for step in xrange(REPETITIONS):
-        x = NAME_TO_PHONE_MAP.get(nameForStep(step))
+    for step in range(REPETITIONS):
+        x = NAME_TO_PHONE_MAP.get(name_for_step(step))
         if x is None:
             x = 'no number'
     return time.clock() - startTime
 
 
-def timeForGet():
+def time_for_get_with_default():
     startTime = time.clock()
-    for step in xrange(REPETITIONS):
-        x = NAME_TO_PHONE_MAP.get(nameForStep(step), 'no number')
+    for step in range(REPETITIONS):
+        x = NAME_TO_PHONE_MAP.get(name_for_step(step), 'no number')
     return time.clock() - startTime
 
 
 if __name__ == '__main__':
-    print('run time with KeyError: %.3fs' % timeForKeyError())
-    print('run time with None handler: %.3fs' % timeForKeyError())
-    print('run time with get(): %.3fs' % timeForKeyError())
+    print('run time with KeyError: %.3fs' % time_for_key_error())
+    print('run time with None handler: %.3fs' % time_for_key_error())
+    print('run time with get(): %.3fs' % time_for_key_error())

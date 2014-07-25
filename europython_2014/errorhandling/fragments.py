@@ -1,14 +1,14 @@
-'''
+"""
 Various code fragments used in the slides. Keeping the original here helps
 ensuring that the code is valid.
-'''
+"""
 import codecs
 import logging
-import sys
 
 from dataerror import DataError
 
-logging.basicConfig(level=logging.INFO)
+
+_log = logging.getLogger('some')
 
 
 # Dummy exception.
@@ -16,7 +16,7 @@ class SomeError(Exception):
     pass
 
 
-def processSomething(height):
+def process_something(height):
     if height <= 0:
         raise ValueError('height must be greater than 0')
 
@@ -24,139 +24,122 @@ def processSomething(height):
     pass
 
 
-def processSomethingAgain(height):
+def process_something_again(height):
     if height <= 0:
         raise ValueError(
             'height is %d ' % height
             + 'but must be greater than 0')
 
-_log = logging.getLogger('some')
 
+def process_data_file(data_file):
+    assert data_file is not None
 
-def processAllThings(dataFile):
-    assert dataFile is not None
-
-    lineNumber = 1
+    line_number = 1
     try:
-        # Process all heights read from `dataFile`.
-        for lineNumber, line in enumerate(dataFile, start=1):
-            processSomething(long(line))
+        # Process all heights read from `data_file`.
+        for line_number, line in enumerate(data_file, start=1):
+            process_something(int(line))
     except ValueError as error:
         print('cannot process %s, line %d: %s' %
-            (dataFile.name, lineNumber, error))
+            (data_file.name, line_number, error))
 
 
-def reportExampleError():
+def report_example_error():
     try:
-        processSomething(-3)
+        process_something(-3)
     except ValueError as error:
-        print error
+        print(error)
 
 
 # Dummy method.
-def doSomething():
+def do_something():
     raise SomeError('something must be something else')
 
 
-def detectErrorAndRaiseException():
-    actualValue = 1
-    expectedValue = 2
+def detect_error_and_raise_exception():
+    actual_value = 1
+    expected_value = 2
 
     # Detect an error and raise an Exception.
-    if actualValue != expectedValue:
+    if actual_value != expected_value:
         raise SomeError('helpful error message')
 
 
-def processInput(inputFile):
+def process_input(input_file):
     # Dummy
     pass
 
 
-def cleanupWithFinally():
+def cleanup_with_Finally():
     # Using finally
     inputFile = codecs.open('some.txt', 'r', 'utf-8')
     try:
-        processInput(inputFile)
+        process_input(inputFile)
     finally:
         inputFile.close()
 
 
-def cleanupWithWith():
+def cleanup_with_with():
     with codecs.open('some.txt', 'r', 'utf-8') as inputFile:
-        processInput(inputFile)
+        process_input(inputFile)
 
 
-def cleanupWithClosing():
-    def prepareCustomerDb():
+def cleanup_with_closing():
+    def prepare_customer_db():
         import sqlite3
         from contextlib import closing
 
         with closing(sqlite3.connect(':memory:')) as customerDb:
             with closing(customerDb.cursor()) as customerCursor:
-                customerCursor.execute('''
+                customerCursor.execute("""
                     create table customers
                         id integer,
                         first_name varchar(60),
                         last_name varchar(60),
                         date_of_birth datetime
                         primary key (id)
-                ''')
+                """)
 
-    prepareCustomerDb()
+    prepare_customer_db()
 
     import sqlite3
     from contextlib import closing
 
     # Print all customers.
-    with closing(sqlite3.connect(':memory:')) as customerDb:
-        with closing(customerDb.cursor()) as customerCursor:
-            for row in customerCursor('select * from customers'):
-                print row
+    with closing(sqlite3.connect(':memory:')) as customer_db:
+        with closing(customer_db.cursor()) as customer_cursor:
+            for row in customer_cursor('select * from customers'):
+                print(row)
 
 
-def processAllThingsPossiblyRaisingDataError(dataFile):
-    assert dataFile is not None
+def process_data_file_possibly_raising_data_error(data_file):
+    assert data_file is not None
 
-    lineNumber = 1
+    line_number = 1
     try:
-        # Process all heights read from `dataFile`.
-        for lineNumber, line in enumerate(dataFile, start=1):
-            processSomething(long(line))
+        # Process all heights read from `data_file`.
+        for line_number, line in enumerate(data_file, start=1):
+            process_something(int(line))
     except ValueError as error:
-        raise DataError(dataFile.name, lineNumber, error)
+        raise DataError(error, data_file.name, line_number)
 
 
-def handleExceptionByLogging():
+def handle_exception_by_logging():
     # Handle an exception raised by a called routine.
     try:
-        doSomething()
-    except SomeError, error:
+        do_something()
+    except SomeError as error:
         logging.error(u'cannot do something: %s', error)
 
 
-def reraiseExceptionWithOriginalStack():
-    # Pass on an exception raised by a called routine and add context to the
-    # error message.
-    try:
-        doSomething()
-    except SomeError, error:
-        raise sys.exc_info()[0], \
-            SomeError(u'cannot do something: %s' % error), \
-            sys.exc_info()[2]
-        # raise sys.exc_info()[0], sys.exc_info()[1], sys.exc_info()[2]
-
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+
     try:
-        detectErrorAndRaiseException()
+        detect_error_and_raise_exception()
     except SomeError:
         pass
 
-    handleExceptionByLogging()
+    handle_exception_by_logging()
 
-#    reraiseExceptionWithOriginalStack()
-    try:
-        reraiseExceptionWithOriginalStack()
-    except SomeError, error:
-        logging.info(u'handled error: %s', error)
-
-    reportExampleError()
+    report_example_error()

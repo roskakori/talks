@@ -1,20 +1,20 @@
-'''
+"""
 Example for chaining an `Exception` to another as cause.
+"""
 
-This requires Python 3.
-'''
-def processSomething(line):
+
+def process_something(line):
     pass
 
 
-def processAllThingsPossiblyRaisingChainedError(dataFile):
+def process_data_file_possibly_raising_chained_error(dataFile):
     assert dataFile is not None
 
     lineNumber = 1
     try:
         # Process all heights read from `dataFile`.
         for lineNumber, line in enumerate(dataFile, start=1):
-            processSomething(long(line))
+            process_something(int(line))
     except ValueError as error:
         raise ValueError('%s (%d): cannot process something' % (
             dataFile.name, lineNumber)) \
@@ -23,4 +23,4 @@ def processAllThingsPossiblyRaisingChainedError(dataFile):
 
 if __name__ == '__main__':
     with open('some.txt', 'rb') as dataFile:
-        processAllThingsPossiblyRaisingChainedError
+        process_data_file_possibly_raising_chained_error
