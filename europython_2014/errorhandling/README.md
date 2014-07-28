@@ -4,7 +4,7 @@ Solution oriented error handling
 Solution oriented error handling is a set of guidelines and best practices
 using Python's built in error handling mechanisms to keep the productive code
 clean, derive helpful error messages directly from the code and release
-ressources properly. It simplifies focusing on the productive parts of the
+resources properly. It simplifies focusing on the productive parts of the
 code and supporting your applications in case things go wrong.
 
 These are the slides and code examples for a talk given at the EuroPython 2014
