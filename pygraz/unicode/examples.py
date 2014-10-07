@@ -63,3 +63,39 @@ for c in ['ü', '€']:
 
 #import sys
 #print(sys.getdefaultencoding())
+
+euro_sign = '€'
+euro_sign = '\u20ac'
+euro_sign = chr(0x20ac)  # Python 2: unichr(0x20a0)
+euro_sign = chr(2 * 16**3 + 0 * 16**2 + 10 * 16**1 + 12 * 16**0)
+euro_sign = chr(8364)
+print(euro_sign)
+print(hex(ord('樹')))
+
+import sys
+import traceback
+try:
+    'Spätzle: 10€'.encode('ascii')
+except UnicodeEncodeError as error:
+    traceback.print_exc(file=sys.stdout)
+
+try:
+    spaetzle_bytes = 'Spätzle: 10€'.encode('cp1252')
+    print(spaetzle_bytes)
+    spaetzle_bytes.decode('utf-8')
+except UnicodeDecodeError as error:
+    traceback.print_exc(file=sys.stdout)
+
+import codecs
+from encodings import cp1252
+
+decoding_table = ''.join([
+    code if code != '\ufffe' else chr(index) \
+    for index, code in enumerate(cp1252.decoding_table)
+])
+assert '\ufffe' not in decoding_table
+cp1252.decoding_table = decoding_table
+cp1252.encoding_table = codecs.charmap_build(decoding_table)
+
+# Führt normalerweise zu UnicodeEncodeError.
+print('\x81'.encode('cp1252'))
