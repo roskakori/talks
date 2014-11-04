@@ -110,3 +110,15 @@ cp1252.encoding_table = codecs.charmap_build(decoding_table)
 
 # Führt normalerweise zu UnicodeEncodeError.
 print('\x81'.encode('cp1252'))
+
+# Normalisation.
+import unicodedata
+print('\u0049')
+print('\u2160')
+print_hexdump([code for code in unicodedata.normalize('NFC', 'ä').encode('utf-16be')])
+print_hexdump([code for code in unicodedata.normalize('NFD', 'ä').encode('utf-16be')])
+
+with io.open('\u0049.tmp', 'wb'):
+    pass
+with io.open('\u2160.tmp', 'wb'):
+    pass
