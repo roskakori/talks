@@ -118,7 +118,19 @@ print('\u2160')
 print_hexdump([code for code in unicodedata.normalize('NFC', 'ä').encode('utf-16be')])
 print_hexdump([code for code in unicodedata.normalize('NFD', 'ä').encode('utf-16be')])
 
+# Write 2 files that show up with the seemingly same name.
 with io.open('\u0049.tmp', 'wb'):
     pass
 with io.open('\u2160.tmp', 'wb'):
     pass
+
+# String comparison with normalization.
+from unicodedata import normalize
+print(normalize('NFC', '\u00e4') == normalize('NFC', '\u0061\u0308'))
+# True - unlaut ä
+print(normalize('NFC', '\u0049') == normalize('NFC', '\u2160'))
+# False - letter I and Roman number I
+print(normalize('NFKC', '\u00e4') == normalize('NFKC', '\u0061\u0308'))
+# True - unlaut ä
+print(normalize('NFKC', '\u0049') == normalize('NFKC', '\u2160'))
+# True - letter I and Roman number I
