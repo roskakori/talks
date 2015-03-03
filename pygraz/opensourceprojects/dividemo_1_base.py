@@ -2,7 +2,6 @@
 dividemo - tool to divide two integer numbers.
 """
 import argparse
-import logging
 import sys
 
 
@@ -27,5 +26,4 @@ def main(arguments):
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
     main(sys.argv[1:])
