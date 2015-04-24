@@ -6,14 +6,14 @@ import logging
 import sys
 
 
-def divided(divident, divisor):
-    return divident // divisor  # //=integer division
+def divided(dividend, divisor):
+    return dividend // divisor  # //=integer division
 
 
 def main(arguments):
     # Parse command line arguments.
     parser = argparse.ArgumentParser(description='divide two integer numbers.')
-    parser.add_argument('divident', metavar='DIVIDENT', type=int,
+    parser.add_argument('dividend', metavar='DIVIDEND', type=int,
                         help='number to divide')
     parser.add_argument('divisor', metavar='DIVISOR', type=int,
                         help='number to divide by')
@@ -22,7 +22,7 @@ def main(arguments):
         parser.error('DIVISOR must not be 0')
 
     # Process arguments and print result.
-    result = divided(args.divident, args.divisor)
+    result = divided(args.dividend, args.divisor)
     print(result)
 
 
