@@ -26,26 +26,33 @@ fly.
 At the time of this writting, I used the following steps to install and setup
 an environment to view and publish the slides using Ubuntu 14.04:
 
-1. Download [Anaconda](https://www.continuum.io/downloads), a Python
-   distrubution with additional packages and tools.
-2. Extract Anaconda to e.g. `/home/me/anaconda3`.
-3. Install the RISE plugin to add a presentation mode:
-   ```
+First, download [Anaconda](https://www.continuum.io/downloads), a Python
+distribution with additional packages and tools. Then extract the archive to
+e.g. `/home/me/anaconda3`.
+
+Next, install the RISE plugin to add a presentation mode to IPython / Jupyter
+Notebook:
+```sh
 $ cd /tmp
 $ git clone https://github.com/damianavila/RISE.git
 $ cd RISE
 $ /home/me/anaconda3/bin/python3 setup.py install
-   ```
-3. Install additional packages in order to be able to export notebooks to
-   PDF:
-   ```
+```
+
+To order to export notebooks to PDF you need to install a few additional
+Ubuntu packages:
+```
 $ sudo apt-get install pandoc texlive-latex-extra
-   ```
-4. Write a little launcher scripts and store it in e.g. `/home/me/bin/notebook.sh`:
-   ```
+```
+
+Finally, write a little launcher scripts and store it in e.g.
+`/home/me/bin/notebook.sh`:
+```sh
 #!/bin/sh
 # Start Jupyter Notebook.
 export PATH=/home/me/anaconda3/bin:$PATH
 jupyter-notebook
-   ```
-5. Run the above script to start editing and viewing notebooks in your browser.
+```
+
+Now you can run the above script to start editing and viewing notebooks in
+your browser.
