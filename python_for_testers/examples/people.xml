@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<people:list xmlns:people="https://www.example.org/xml/people">
+   <people:updated date="2016-02-16" />
+   <people:person name="Alice" phone="0650/12345678" size="172" />
+   <people:person name="Bob" phone="0654/23456789" size="167" />
+   <people:person name="Bärbel" phone="0699/34567890" size="182" />
+   <people:person name="Günther" size="172">
+      <people:note>Ask for phone number.</people:note>
+   </people:person>
+</people:list>
