@@ -16,16 +16,10 @@ def copy(source, target, preserve='all', is_recursive=False):
 
 def main(args=None):
     if args is None:
-        args = sys.argv
+        args = sys.argv[1:]
 
     # Process arguments. In case of error, report it and exit.
     parser = argparse.ArgumentParser(description='copy files or folders')
-    parser.add_argument(
-        'sources', metavar='SOURCE', nargs='+',
-        help="file or folder to copy")
-    parser.add_argument(
-        'target', metavar='TARGET',
-        help="target file or folder")
     parser.add_argument(
         '--recursive', '-r', action='store_true',
         help='recursively copy folders')
@@ -36,6 +30,12 @@ def main(args=None):
         help='preserve specified attributes, default: %(default)s')
     parser.add_argument(
          '--version', action='version', version='%(prog)s 1.0')
+    parser.add_argument(
+        'sources', metavar='SOURCE', nargs='+',
+        help="file or folder to copy")
+    parser.add_argument(
+        'target', metavar='TARGET',
+        help="target file or folder")
     arguments = parser.parse_args(args)
 
     # Exit code: 0=success, >0=error.
