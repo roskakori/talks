@@ -1,10 +1,47 @@
-Python for testers
-==================
+Introduction to Python
+======================
 
 This is a collection of slides to introduce the Python programming language
-to testers. The target audience are testers with no prior experience in
-Python but a basic understanding of general programming language concepts
+to testers or devops. The target audience are testers with no prior experience
+in Python but a basic understanding of general programming language concepts
 such as variables, loops and functions.
+
+
+Curriculum for testers
+----------------------
+
+* Numbers
+* Strings, 
+* Collections and loops
+* Conversion and formatting
+* Date and time
+* Files
+* Unicode
+* CSV
+* HTTP-queries, JSON and REST
+* Functions
+* object orientation
+* Error handling
+* XML
+* Testing
+* Style guide
+* command line parsing
+* Packages
+* Bits and low level protocols
+* Logging
+
+Curriculum for devpos
+---------------------
+
+* Numbers
+* Strings
+* Time
+* Conversion
+* Collections
+* Patterns
+* Functions
+* Errors
+* Files
 
 
 License
