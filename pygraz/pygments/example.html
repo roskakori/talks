@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #008800; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #AA22FF; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #008800; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #008800; font-style: italic } /* Comment.Multiline */
+body .cp { color: #008800 } /* Comment.Preproc */
+body .cpf { color: #008800; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #008800; font-style: italic } /* Comment.Single */
+body .cs { color: #008800; font-weight: bold } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #AA22FF; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #AA22FF; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #AA22FF; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #AA22FF } /* Keyword.Pseudo */
+body .kr { color: #AA22FF; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #00BB00; font-weight: bold } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BB4444 } /* Literal.String */
+body .na { color: #BB4444 } /* Name.Attribute */
+body .nb { color: #AA22FF } /* Name.Builtin */
+body .nc { color: #0000FF } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #00A000 } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #B8860B } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sa { color: #BB4444 } /* Literal.String.Affix */
+body .sb { color: #BB4444 } /* Literal.String.Backtick */
+body .sc { color: #BB4444 } /* Literal.String.Char */
+body .dl { color: #BB4444 } /* Literal.String.Delimiter */
+body .sd { color: #BB4444; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BB4444 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BB4444 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BB4444 } /* Literal.String.Single */
+body .ss { color: #B8860B } /* Literal.String.Symbol */
+body .bp { color: #AA22FF } /* Name.Builtin.Pseudo */
+body .fm { color: #00A000 } /* Name.Function.Magic */
+body .vc { color: #B8860B } /* Name.Variable.Class */
+body .vg { color: #B8860B } /* Name.Variable.Global */
+body .vi { color: #B8860B } /* Name.Variable.Instance */
+body .vm { color: #B8860B } /* Name.Variable.Magic */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2></h2>
+
+<div class="highlight"><pre><span></span><span class="c1">-- Simple Transact-SQL example.</span>
+<span class="k">declare</span><span class="w"> </span><span class="nv">@date_of_birth</span><span class="w"> </span><span class="nc">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1990-01-01&#39;</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">select</span><span class="w"> </span><span class="k">top</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">    </span><span class="o">*</span><span class="w"></span>
+<span class="k">from</span><span class="w"></span>
+<span class="w">    </span><span class="o">[</span><span class="n">customer</span><span class="o">]</span><span class="w"></span>
+<span class="k">where</span><span class="w"></span>
+<span class="w">    </span><span class="o">[</span><span class="n">date_of_birth</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">@date_of_birth</span><span class="w"></span>
+<span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"></span>
+<span class="w">    </span><span class="o">[</span><span class="n">customer_number</span><span class="o">]</span><span class="w"></span>
+</pre></div>
+</body>
+</html>

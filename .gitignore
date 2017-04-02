@@ -48,3 +48,6 @@ nosetests.xml
 
 # LibreOffice locks
 .~lock.*
+.env
+../../.idea/
+example.html
