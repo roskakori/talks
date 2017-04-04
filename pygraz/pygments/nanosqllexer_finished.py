@@ -13,7 +13,6 @@ _NANOSQL_KEYWORDS = (
     'where'
 )
 
-
 class NanoSqlLexer(RegexLexer):
     name = 'NanoSQL'
     aliases = ['nanosql']
@@ -21,6 +20,18 @@ class NanoSqlLexer(RegexLexer):
 
     tokens = {
         'root': [
-            # TODO: Add rules.
+            (r'\s+', Whitespace),
+            (r'--.*?$', Comment),
+            (words(_NANOSQL_KEYWORDS, suffix=r'\b'), Keyword),
+            (r'\d+', Number),
+            (r'\w+', Name),
+            (r'[.,;:]', Punctuation),
+            (r'[<>=/*+-]', Operator),
+            ('\'', String, 'string'),
         ],
+        'string': [
+            ("''", String),
+            (r'[^\']', String),
+            ("'", String, '#pop')
+        ]
     }
