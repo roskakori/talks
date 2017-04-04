@@ -1,0 +1,11 @@
+-- Example NanoSQL code.
+select
+    FirstName,
+    Surname,
+    Rating / 100 as RatingPercent,
+    'Say ''Hello''' as Advice
+from
+    Customer
+where
+    DateOfBirth >= '1990-01-01'
+-- EOF
