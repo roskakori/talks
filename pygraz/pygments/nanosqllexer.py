@@ -7,10 +7,10 @@ from pygments.token import Comment, Keyword, Name, Number, String, \
 
 
 _NANOSQL_KEYWORDS = (
-    'as'
+    'as',
     'from',
     'select',
-    'where'
+    'where',
 )
 
 

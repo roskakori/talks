@@ -7,10 +7,10 @@ from pygments.token import Comment, Keyword, Name, Number, String, \
 
 
 _NANOSQL_KEYWORDS = (
-    'as'
+    'as',
     'from',
     'select',
-    'where'
+    'where',
 )
 
 class NanoSqlLexer(RegexLexer):
@@ -20,9 +20,9 @@ class NanoSqlLexer(RegexLexer):
 
     tokens = {
         'root': [
+            (words(_NANOSQL_KEYWORDS, suffix=r'\b'), Keyword),
             (r'\s+', Whitespace),
             (r'--.*?$', Comment),
-            (words(_NANOSQL_KEYWORDS, suffix=r'\b'), Keyword),
             (r'\d+', Number),
             (r'\w+', Name),
             (r'[.,;:]', Punctuation),

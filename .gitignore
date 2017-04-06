@@ -49,5 +49,6 @@ nosetests.xml
 # LibreOffice locks
 .~lock.*
 .env
-../../.idea/
-example.html
+.idea/
+/pygraz/pygments/example.html
+/pygraz/pygments/example.rtf
