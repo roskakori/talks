@@ -11918,9 +11918,7 @@ a.anchor-link {
 <li>What is sentiment analysis</li>
 <li>Text parts: sentences and tokens</li>
 <li>Topics and ratings</li>
-<li>Extracting</li>
-<li>Special topics: slang terms, typos, emojis</li>
-<li>Example findings</li>
+<li>Special topics (slang terms, typos, emojis, ...)</li>
 </ul>
 
 </div>
@@ -12028,10 +12026,11 @@ a.anchor-link {
 <h2 id="Innkeeper-wants-rough-answers-for...">Innkeeper wants rough answers for...<a class="anchor-link" href="#Innkeeper-wants-rough-answers-for...">&#182;</a></h2><ul>
 <li>How do people feel about certain areas of my business?</li>
 <li>What are the perceived strengths of my business ("unique sales propositions")</li>
-<li><p>What do I need to improve?</p>
-</li>
-<li><p>At a glance!</p>
-</li>
+<li>What do I need to improve?</li>
+</ul>
+<p>And he wants to...:</p>
+<ul>
+<li>Get this at a glance.</li>
 <li>If necessary drill down into specific feedbacks.</li>
 </ul>
 
@@ -12056,7 +12055,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-sentiment-detection?">What is sentiment detection?<a class="anchor-link" href="#What-is-sentiment-detection?">&#182;</a></h1><ul>
+<h1 id="What-is-sentiment-analysis?">What is sentiment analysis?<a class="anchor-link" href="#What-is-sentiment-analysis?">&#182;</a></h1><ul>
 <li>„systematically identify, extract, quantify, and study affective states and subjective information“. Source:  <a href="https://en.wikipedia.org/wiki/Sentiment_analysis">https://en.wikipedia.org/wiki/Sentiment_analysis</a></li>
 <li>Collects opinions from text written in natural language and stores them in a structured way</li>
 <li>Different levels:<ul>
@@ -12066,6 +12065,7 @@ a.anchor-link {
 </ul>
 </li>
 </ul>
+<p>(Sometimes also called: sentiment detection, opinion mining etc.)</p>
 
 </div>
 </div>
@@ -12116,7 +12116,7 @@ Image by User: Benreis at wikivoyage shared, CC BY-SA 3.0, <a href="https://comm
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Aspect-level">Aspect level<a class="anchor-link" href="#Aspect-level">&#182;</a></h2><ul>
 <li>Multiple aspects in the same sentence</li>
-<li>Example: "The schnitzel tasts very well but it is too small."<ul>
+<li>Example: "The schnitzel tastes very well but it is too small."<ul>
 <li>Schnitzel/taste = good</li>
 <li>Schnitzel/size = bad</li>
 </ul>
@@ -12181,7 +12181,6 @@ Image by User: Benreis at wikivoyage shared, CC BY-SA 3.0, <a href="https://comm
 <li>Analyze data</li>
 <li>Interpret and act on results</li>
 </ol>
-<p>See also: TODO: Link to EP18-Presentation on SA-Workflow</p>
 
 </div>
 </div>
@@ -12191,21 +12190,20 @@ Image by User: Benreis at wikivoyage shared, CC BY-SA 3.0, <a href="https://comm
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Basic-workflow-with-TeLLers-feedback">Basic workflow with TeLLers feedback<a class="anchor-link" href="#Basic-workflow-with-TeLLers-feedback">&#182;</a></h2><ol>
-<li>Collect data: <strong>already happened</strong></li>
-<li>Preprocess data so the can be analyzed: <strong>a little towards the end of the presentation</strong></li>
-<li>Analyze data: <strong>main focus of this presentation</strong></li>
-<li>Interpret and act on results <strong>done by innkeeper using analysis UI</strong></li>
+<li>Collect data → <strong>already happened</strong></li>
+<li>Preprocess data so the can be analyzed → <strong>a little towards the end of the presentation</strong></li>
+<li>Analyze data → <strong>main focus of this presentation</strong></li>
+<li>Interpret and act on results → <strong>done by innkeeper using analysis UI</strong></li>
 </ol>
-<p>Also: no premature performance optimization.</p>
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO: Meme: Brace yourself code incoming</p>
+<h2 id="Enough-of-the-pleasentries...">Enough of the pleasentries...<a class="anchor-link" href="#Enough-of-the-pleasentries...">&#182;</a></h2><p><img src="images/brace_yourself_code_incoming.jpg" alt="Brace yourself code incoming"></p>
 
 </div>
 </div>
@@ -12230,7 +12228,7 @@ Image by User: Benreis at wikivoyage shared, CC BY-SA 3.0, <a href="https://comm
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">feedback_simple</span> <span class="o">=</span> <span class="s1">&#39;The schnitzel tastes good. The soup was too hot. The waiter was quick and polite.&#39;</span>
@@ -12252,7 +12250,7 @@ Image by User: Benreis at wikivoyage shared, CC BY-SA 3.0, <a href="https://comm
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="n">feedback_simple</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
@@ -12296,7 +12294,7 @@ Image by User: Benreis at wikivoyage shared, CC BY-SA 3.0, <a href="https://comm
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">sentences</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
@@ -12348,7 +12346,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">feedback_rude</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;The waiter was very rude, </span>
@@ -12372,7 +12370,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="n">feedback_rude</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
@@ -12419,7 +12417,7 @@ he screamed &#34;Private!&#34;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
@@ -12443,7 +12441,7 @@ he screamed &#34;Private!&#34;
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">document</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="n">feedback_simple</span><span class="p">)</span>
@@ -12486,7 +12484,7 @@ The waiter was quick and polite.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">document_rude</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="n">feedback_rude</span><span class="p">)</span>
@@ -12530,7 +12528,7 @@ he screamed &#34;Private!&#34;.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_sent</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">sents</span><span class="p">)</span>
@@ -12576,7 +12574,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tastes_token</span> <span class="o">=</span> <span class="n">first_sent</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -12608,7 +12606,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tastes_token</span><span class="o">.</span><span class="n">lemma_</span>  <span class="c1"># basic form of word</span>
@@ -12624,7 +12622,7 @@ good
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -12641,7 +12639,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tastes_token</span><span class="o">.</span><span class="n">pos_</span>  <span class="c1"># &quot;part of speech&quot; = role of word in sentence</span>
@@ -12657,7 +12655,7 @@ good
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -12684,7 +12682,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tastes_token</span><span class="o">.</span><span class="n">pos_</span><span class="p">)</span>
@@ -12715,7 +12713,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tastes_token</span><span class="o">.</span><span class="n">pos</span>
@@ -12731,7 +12729,7 @@ good
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -12757,7 +12755,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">spacy.symbols</span> <span class="k">import</span> <span class="n">ADJ</span><span class="p">,</span> <span class="n">NOUN</span><span class="p">,</span> <span class="n">VERB</span>
@@ -12789,7 +12787,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">spacy.symbols</span> <span class="k">import</span> <span class="n">NAMES</span>
@@ -12822,7 +12820,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">spacy.symbols</span> <span class="k">import</span> <span class="n">IDS</span>
@@ -12851,13 +12849,26 @@ good
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Limitations-of-spaCy">Limitations of spaCy<a class="anchor-link" href="#Limitations-of-spaCy">&#182;</a></h2><ul>
+<li>Tokenizers use probabilistic models.</li>
+<li><code>lemma</code> and <code>pos</code> can sometimes be wrong.</li>
+<li>Typically good enough.</li>
+<li>If not: build you own model</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Topics-and-ratings">Topics and ratings<a class="anchor-link" href="#Topics-and-ratings">&#182;</a></h1><p>TODO: Some meme on back to the topic</p>
-
+<h1 id="Topics-and-ratings">Topics and ratings<a class="anchor-link" href="#Topics-and-ratings">&#182;</a></h1>
 </div>
 </div>
 </div></section><section>
@@ -12868,7 +12879,7 @@ good
 <h2 id="Topics">Topics<a class="anchor-link" href="#Topics">&#182;</a></h2><p>There are several ways to find appropriate topics, for example:</p>
 <ul>
 <li>Look what others use in similar situations</li>
-<li>Automatic detection, for example <code>gensim</code>: TODO: Link</li>
+<li>Automatic detection using topic modelling, for example <code>gensim</code>: <a href="https://radimrehurek.com/gensim/">https://radimrehurek.com/gensim/</a></li>
 <li>Build a tag cloud and see if it's useful</li>
 <li>Ask domain experts (here: innkeepers)</li>
 </ul>
@@ -12881,11 +12892,11 @@ good
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Actual-topics-for-our-example">Actual topics for our example<a class="anchor-link" href="#Actual-topics-for-our-example">&#182;</a></h2><ul>
-<li>ambience: decoration, space, light, music, temperature, ...</li>
-<li>food and beverages: eating, drinking, taste, menu, selection</li>
-<li>hygiene: toilett, smell, ...</li>
-<li>service: waiting and reaction times, courtesy, competence, availability, ...</li>
-<li>value: size of portions, price, ...</li>
+<li><strong>ambience</strong>: decoration, space, light, music, temperature, ...</li>
+<li><strong>food and beverages</strong>: eating, drinking, taste, menu, selection</li>
+<li><strong>hygiene</strong>: toilett, smell, ...</li>
+<li><strong>service</strong>: waiters, reaction times, courtesy, competence, availability, ...</li>
+<li><strong>value</strong>: price, size of portions, ...</li>
 </ul>
 
 </div>
@@ -12902,7 +12913,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
@@ -12924,7 +12935,7 @@ good
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Rating-(sentiment)">Rating (sentiment)<a class="anchor-link" href="#Rating-(sentiment)">&#182;</a></h2><p>There are serverl ways to represent a rating, for example:</p>
+<h2 id="Rating-(sentiment)">Rating (sentiment)<a class="anchor-link" href="#Rating-(sentiment)">&#182;</a></h2><p>There are serveral ways to represent a rating, for example:</p>
 <ul>
 <li>Two distinct values "prositive" and "negative"</li>
 <li>Same as above but with more distinct values, e.g. 1 to 5 stars</li>
@@ -12945,7 +12956,7 @@ good
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Rating</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
@@ -12966,7 +12977,7 @@ good
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Extracting-opinions">Extracting opinions<a class="anchor-link" href="#Extracting-opinions">&#182;</a></h1>
+<h2 id="The-lexicon">The lexicon<a class="anchor-link" href="#The-lexicon">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
@@ -12974,7 +12985,1295 @@ good
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Special-issues">Special issues<a class="anchor-link" href="#Special-issues">&#182;</a></h1>
+<h2 id="Contents-of-the-lexicon">Contents of the lexicon<a class="anchor-link" href="#Contents-of-the-lexicon">&#182;</a></h2><ul>
+<li>words relevant for our domain in their basic form (lemma)<ul>
+<li>here: words can be regular expression</li>
+<li>for example: <code>.*schnitzel</code></li>
+<li>accepts various kinds, for instance "schnitzel" and "surschnitzel"</li>
+</ul>
+</li>
+<li>possible topic</li>
+<li>possible rating</li>
+<li>can easily be stored in spreadsheet, data base etc</li>
+</ul>
+<p>Examples:</p>
+
+<pre><code>Lemma        Topic      Rating
+------------ ---------- ------
+waiter       service
+waitress     service
+wait                    bad
+quick                   good
+.*schnitzel  food
+music        ambience
+loud                    bad</code></pre>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-collect-words-for-lexicon?">How to collect words for lexicon?<a class="anchor-link" href="#How-to-collect-words-for-lexicon?">&#182;</a></h2><ul>
+<li>Add words that are obvious and easy to find, for example collect food term from menu</li>
+<li>Find the most common words in raw data and examine them</li>
+<li>Analyse data early version and check sentences with no topic or rating for interesting words --&gt; iterative improvement</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lexicon-entries-in-Python">Lexicon entries in Python<a class="anchor-link" href="#Lexicon-entries-in-Python">&#182;</a></h2><ul>
+<li>mostly a data container</li>
+<li>but we also want to be able to compare if it matches a spaCy <code>Token</code> --&gt; we need a <code>matching()</code> function.</li>
+<li>tokens can match exactly or only after transformations (for example upper/lower case) --&gt; score between 0 (no match) and 1 (perfect match)</li>
+</ul>
+<p>And as we want to be able to use regular expressions and spaCy <code>Token</code> we need to import them now:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">spacy.tokens</span> <span class="k">import</span> <span class="n">Token</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">LexiconEntry</span><span class="p">:</span>
+    <span class="n">_IS_REGEX_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*[.+*\[$^</span><span class="se">\\</span><span class="s1">]&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lemma</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">topic</span><span class="p">:</span> <span class="n">Topic</span><span class="p">,</span> <span class="n">rating</span><span class="p">:</span> <span class="n">Rating</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">lemma</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span> <span class="o">=</span> <span class="n">lemma</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lower_lemma</span> <span class="o">=</span> <span class="n">lemma</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">topic</span> <span class="o">=</span> <span class="n">topic</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="n">rating</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_regex</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">LexiconEntry</span><span class="o">.</span><span class="n">_IS_REGEX_REGEX</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regex</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">matching</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A weight between 0.0 and 1.0 on how much ``token`` matches this entry.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">token</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regex</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">):</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mf">0.6</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="p">):</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="k">elif</span> <span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mf">0.9</span>
+            <span class="k">elif</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mf">0.8</span>
+            <span class="k">elif</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mf">0.7</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;LexiconEntry(</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">lemma</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, topic=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, rating=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regex</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, is_regex=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regex</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;)&#39;</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-lexicon-in-Python">The lexicon in Python<a class="anchor-link" href="#The-lexicon-in-Python">&#182;</a></h2><ul>
+<li>Contains a list of <code>LexiconEntry</code></li>
+<li>Can find the best matching entry for a <code>Token</code> (or <code>None</code>)</li>
+<li>In the beginning entries have to be added</li>
+<li>manually for our example, in practice from e.g .CSV</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">isclose</span>
+
+<span class="k">class</span> <span class="nc">Lexicon</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">LexiconEntry</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    
+    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lemma</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">topic</span><span class="p">:</span> <span class="n">Topic</span><span class="p">,</span> <span class="n">rating</span><span class="p">:</span> <span class="n">Rating</span><span class="p">):</span>
+        <span class="n">lexicon_entry</span> <span class="o">=</span> <span class="n">LexiconEntry</span><span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">rating</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lexicon_entry</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">lexicon_entry_for</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LexiconEntry</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Entry in lexicon that best matches ``token``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">lexicon_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
+        <span class="n">lexicon_entry_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">best_matching</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">while</span> <span class="n">lexicon_entry_index</span> <span class="o">&lt;</span> <span class="n">lexicon_size</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">isclose</span><span class="p">(</span><span class="n">best_matching</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">):</span>
+            <span class="n">lexicon_entry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">[</span><span class="n">lexicon_entry_index</span><span class="p">]</span>
+            <span class="n">matching</span> <span class="o">=</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">matching</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">matching</span> <span class="o">&gt;</span> <span class="n">best_matching</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">lexicon_entry</span>
+                <span class="n">best_matching</span> <span class="o">=</span> <span class="n">matching</span>
+            <span class="n">lexicon_entry_index</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-build-a-small-lexicon">Let's build a small lexicon<a class="anchor-link" href="#Let's-build-a-small-lexicon">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lexicon</span> <span class="o">=</span> <span class="n">Lexicon</span><span class="p">()</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;waiter&#39;</span>     <span class="p">,</span> <span class="n">Topic</span><span class="o">.</span><span class="n">SERVICE</span> <span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;waitress&#39;</span>   <span class="p">,</span> <span class="n">Topic</span><span class="o">.</span><span class="n">SERVICE</span> <span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;wait&#39;</span>       <span class="p">,</span> <span class="kc">None</span>          <span class="p">,</span> <span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;quick&#39;</span>      <span class="p">,</span> <span class="kc">None</span>          <span class="p">,</span> <span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;.*schnitzel&#39;</span><span class="p">,</span> <span class="n">Topic</span><span class="o">.</span><span class="n">FOOD</span>    <span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;music&#39;</span>      <span class="p">,</span> <span class="n">Topic</span><span class="o">.</span><span class="n">AMBIENCE</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;loud&#39;</span>       <span class="p">,</span> <span class="kc">None</span>          <span class="p">,</span> <span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tasty&#39;</span>      <span class="p">,</span> <span class="n">Topic</span><span class="o">.</span><span class="n">FOOD</span>    <span class="p">,</span> <span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">)</span>
+<span class="n">lexicon</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;polite&#39;</span>     <span class="p">,</span> <span class="n">Topic</span><span class="o">.</span><span class="n">SERVICE</span> <span class="p">,</span> <span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Matching-tokens-in-a-sentence-to-a-lexicon-entry">Matching tokens in a sentence to a lexicon entry<a class="anchor-link" href="#Matching-tokens-in-a-sentence-to-a-lexicon-entry">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feedback_text</span> <span class="o">=</span> <span class="s1">&#39;The music was very loud.&#39;</span>
+<span class="n">feedback</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="n">feedback_text</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="nb">next</span><span class="p">(</span><span class="n">feedback</span><span class="o">.</span><span class="n">sents</span><span class="p">):</span>
+    <span class="n">lexicon_entry</span> <span class="o">=</span> <span class="n">lexicon</span><span class="o">.</span><span class="n">lexicon_entry_for</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{token!s:10}</span><span class="s1"> </span><span class="si">{lexicon_entry}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The        None
+music      LexiconEntry(music, topic=AMBIENCE)
+was        None
+very       None
+loud       LexiconEntry(loud, rating=BAD)
+.          None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Yeah,-our-first-simple-sentiment-analysis!">Yeah, our first simple sentiment analysis!<a class="anchor-link" href="#Yeah,-our-first-simple-sentiment-analysis!">&#182;</a></h2><p>Just add some filters and format the output:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feedback_text</span> <span class="o">=</span> <span class="s1">&#39;The music was very loud.&#39;</span>
+<span class="n">feedback</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="n">feedback_text</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">feedback</span><span class="o">.</span><span class="n">sents</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sent</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">sent</span><span class="p">:</span>
+        <span class="n">lexicon_entry</span> <span class="o">=</span> <span class="n">lexicon</span><span class="o">.</span><span class="n">lexicon_entry_for</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lexicon_entry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">topic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">,</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">topic</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">,</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">rating</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The music was very loud.
+     Topic.AMBIENCE
+     Rating.BAD
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The end? Not quite.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Intensifiers,-diminishers,-negations">Intensifiers, diminishers, negations<a class="anchor-link" href="#Intensifiers,-diminishers,-negations">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intensifiers-and-diminishers">Intensifiers and diminishers<a class="anchor-link" href="#Intensifiers-and-diminishers">&#182;</a></h2><ul>
+<li>increase or decrease the rating of sentiment words</li>
+<li>examples:<ul>
+<li>diminishers: barely, slightly, somewhat, ...</li>
+<li>intensifiers: really, terribly, very, ...</li>
+</ul>
+</li>
+</ul>
+<p>Impact on "loud":</p>
+<ul>
+<li>"loud": <code>Rating.BAD</code></li>
+<li>"very loud": <code>Rating.VERY_BAD</code></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intensifiers-and-diminishers-in-Python">Intensifiers and diminishers in Python<a class="anchor-link" href="#Intensifiers-and-diminishers-in-Python">&#182;</a></h2><p>Use sets:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">INTENSIFIERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;really&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;terribly&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;very&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">is_intensifier</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">INTENSIFIERS</span>
+
+<span class="n">DIMINISHERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;barely&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;slightly&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;somewhat&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">is_diminisher</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">DIMINISHERS</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Find-out-if-a-token-is-an-intensifier">Find out if a token is an intensifier<a class="anchor-link" href="#Find-out-if-a-token-is-an-intensifier">&#182;</a></h2><p>For a little test, get the 4th token in 1st sentence, which is "very".</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">very_token</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">nlp_en</span><span class="p">(</span><span class="n">feedback_text</span><span class="p">)</span><span class="o">.</span><span class="n">sents</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">very_token</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>very
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_intensifier</span><span class="p">(</span><span class="n">very_token</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intensify-or-diminish-a-Rating">Intensify or diminish a Rating<a class="anchor-link" href="#Intensify-or-diminish-a-Rating">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">signum</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">_MIN_RATING_VALUE</span> <span class="o">=</span> <span class="n">Rating</span><span class="o">.</span><span class="n">VERY_BAD</span><span class="o">.</span><span class="n">value</span>
+<span class="n">_MAX_RATING_VALUE</span> <span class="o">=</span> <span class="n">Rating</span><span class="o">.</span><span class="n">VERY_GOOD</span><span class="o">.</span><span class="n">value</span>
+
+
+<span class="k">def</span> <span class="nf">_ranged_rating</span><span class="p">(</span><span class="n">rating_value</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Rating</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">Rating</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">_MAX_RATING_VALUE</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">_MIN_RATING_VALUE</span><span class="p">,</span> <span class="n">rating_value</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">diminished</span><span class="p">(</span><span class="n">rating</span><span class="p">:</span> <span class="n">Rating</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Rating</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_ranged_rating</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">signum</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rating</span>
+
+<span class="k">def</span> <span class="nf">intensified</span><span class="p">(</span><span class="n">rating</span><span class="p">:</span> <span class="n">Rating</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Rating</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_ranged_rating</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">signum</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rating</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">diminished</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diminished</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">SOMEWHAT_BAD</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">intensified</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Rating.SOMEWHAT_BAD
+Rating.SOMEWHAT_BAD
+Rating.VERY_BAD
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Negations">Negations<a class="anchor-link" href="#Negations">&#182;</a></h2><ul>
+<li>turn a sentiment to the opposit</li>
+<li>example: "not"<ul>
+<li>"tasty" = Rating.<strong>GOOD</strong></li>
+<li>"not tasty" = Rating.<strong>BAD</strong></li>
+</ul>
+</li>
+<li>can be combined with intensifiers and diminishers</li>
+<li>example:<ul>
+<li>"very good" = Rating.<strong>VERY</strong>_GOOD</li>
+<li>"not very good" = Rating.<strong>SOMEWHAT</strong>_BAD </li>
+</ul>
+</li>
+<li>negation also swaps intensifier and diminisher</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Negations-in-Python">Negations in Python<a class="anchor-link" href="#Negations-in-Python">&#182;</a></h2><p>Detection is similar to intensifiers and diminishers:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">NEGATIONS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;no&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;not&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">is_negation</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">NEGATIONS</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Negation-of-a-Rating">Negation of a Rating<a class="anchor-link" href="#Negation-of-a-Rating">&#182;</a></h2><p>Negating a <code>Rating</code> is classic mapping issue:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_RATING_TO_NEGATED_RATING_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">Rating</span><span class="o">.</span><span class="n">VERY_BAD</span>     <span class="p">:</span> <span class="n">Rating</span><span class="o">.</span><span class="n">SOMEWHAT_GOOD</span><span class="p">,</span>
+    <span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span>          <span class="p">:</span> <span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">,</span>
+    <span class="n">Rating</span><span class="o">.</span><span class="n">SOMEWHAT_BAD</span> <span class="p">:</span> <span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">,</span>  <span class="c1"># hypothetical?</span>
+    <span class="n">Rating</span><span class="o">.</span><span class="n">SOMEWHAT_GOOD</span><span class="p">:</span> <span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span><span class="p">,</span>  <span class="c1"># hypothetical?</span>
+    <span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span>         <span class="p">:</span> <span class="n">Rating</span><span class="o">.</span><span class="n">BAD</span><span class="p">,</span>
+    <span class="n">Rating</span><span class="o">.</span><span class="n">VERY_GOOD</span>    <span class="p">:</span> <span class="n">Rating</span><span class="o">.</span><span class="n">SOMEWHAT_BAD</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">negated_rating</span><span class="p">(</span><span class="n">rating</span><span class="p">:</span> <span class="n">Rating</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Rating</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">_RATING_TO_NEGATED_RATING_MAP</span><span class="p">[</span><span class="n">rating</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">,</span> <span class="s1">&#39; -&gt; &#39;</span><span class="p">,</span> <span class="n">negated_rating</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">GOOD</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">VERY_BAD</span><span class="p">,</span> <span class="s1">&#39; -&gt; &#39;</span><span class="p">,</span> <span class="n">negated_rating</span><span class="p">(</span><span class="n">Rating</span><span class="o">.</span><span class="n">VERY_BAD</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Rating.GOOD  -&gt;  Rating.BAD
+Rating.VERY_BAD  -&gt;  Rating.SOMEWHAT_GOOD
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="So-far-so-good">So far so good<a class="anchor-link" href="#So-far-so-good">&#182;</a></h2><p>Based on a simple lexicon and a few Python sets we can now assign sentiment information to single tokens concerning:</p>
+<ul>
+<li>Topic</li>
+<li>Rating</li>
+<li>intensifiers / diminishers</li>
+<li>nagations</li>
+</ul>
+<p>However, we still need to combine multiple tokens in our analysis. We could of course start messing with lists of tokens. However, spaCy offers nice possibilities for such situations.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extending-spaCy's-pipeline">Extending spaCy's pipeline<a class="anchor-link" href="#Extending-spaCy's-pipeline">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What's-this-pipleline-thingy?">What's this pipleline thingy?<a class="anchor-link" href="#What's-this-pipleline-thingy?">&#182;</a></h2><ul>
+<li>When you pass a text to spaCy's <code>nlp()</code> it performs multiple separate steps until it ends up with tokens and all their attributes</li>
+<li>Nice and clean "separation of concerns" (basic software principle)</li>
+<li><code>Token</code> can get additional attributes (same goes for documents (<code>Doc</code>) and sents (<code>Span</code>), but we don't need this right now)</li>
+<li>Steps can be added or removed from the pipeline</li>
+</ul>
+<p>Recommended reading: <a href="https://explosion.ai/blog/spacy-v2-pipelines-extensions">https://explosion.ai/blog/spacy-v2-pipelines-extensions</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extending-Token">Extending Token<a class="anchor-link" href="#Extending-Token">&#182;</a></h2><p>We can add new attributes for sentiment relevant information to the extensible "underscore" attribute:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Token</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="s1">&#39;topic&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">Token</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">Token</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="s1">&#39;is_negation&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">Token</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="s1">&#39;is_intensifier&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">Token</span><span class="o">.</span><span class="n">set_extension</span><span class="p">(</span><span class="s1">&#39;is_diminisher&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can set and examine these attributes</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">token</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">nlp_en</span><span class="p">(</span><span class="s1">&#39;schnitzel&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sents</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="p">)</span>
+<span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span> <span class="o">=</span> <span class="n">Topic</span><span class="o">.</span><span class="n">FOOD</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>schnitzel
+Topic.FOOD
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intermission:-a-small-debugging-function">Intermission: a small debugging function<a class="anchor-link" href="#Intermission:-a-small-debugging-function">&#182;</a></h2><p>In order to print tokens including the new attributes here's a little helper:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">debugged_token</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;Token(</span><span class="si">%s</span><span class="s1">, lemma=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, topic=&#39;</span> <span class="o">+</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, rating=&#39;</span> <span class="o">+</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_diminisher</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, diminisher&#39;</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_intensifier</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, intensifier&#39;</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_negation</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;, negation&#39;</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="s1">&#39;)&#39;</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">debugged_token</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Token(schnitzel, lemma=schnitzel, topic=FOOD)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extending-the-pipeline">Extending the pipeline<a class="anchor-link" href="#Extending-the-pipeline">&#182;</a></h2><p>First we need a function to add to the pipeline that sets our new <code>Token</code> attributes:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">opinion_matcher</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">sents</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is_intensifier</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+                <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_intensifier</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">is_diminisher</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+                <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_diminisher</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">is_negation</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+                <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_negation</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">lexicon_entry</span> <span class="o">=</span> <span class="n">lexicon</span><span class="o">.</span><span class="n">lexicon_entry_for</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">lexicon_entry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">rating</span>
+                    <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span> <span class="o">=</span> <span class="n">lexicon_entry</span><span class="o">.</span><span class="n">topic</span>
+    <span class="k">return</span> <span class="n">doc</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then we can actually add it to the pipeline (and remove it first if it already was part of the pipeline):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">nlp_en</span><span class="o">.</span><span class="n">has_pipe</span><span class="p">(</span><span class="s1">&#39;opinion_matcher&#39;</span><span class="p">):</span>
+    <span class="n">nlp_en</span><span class="o">.</span><span class="n">remove_pipe</span><span class="p">(</span><span class="s1">&#39;opinion_matcher&#39;</span><span class="p">)</span>
+<span class="n">nlp_en</span><span class="o">.</span><span class="n">add_pipe</span><span class="p">(</span><span class="n">opinion_matcher</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extracting-token-relevant-for-the-opinion">Extracting token relevant for the opinion<a class="anchor-link" href="#Extracting-token-relevant-for-the-opinion">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With all the information attached to the token it is simple to reduce a sentence to its essential information:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_essential</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+        <span class="ow">or</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+        <span class="ow">or</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_diminisher</span> \
+        <span class="ow">or</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_intensifier</span> \
+        <span class="ow">or</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_negation</span>
+        
+<span class="k">def</span> <span class="nf">essential_tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">token</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">is_essential</span><span class="p">(</span><span class="n">token</span><span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For example:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">document</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="s1">&#39;The schnitzel is not very tasty.&#39;</span><span class="p">)</span>
+
+<span class="n">opinion_essence</span> <span class="o">=</span> <span class="n">essential_tokens</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">opinion_essence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">debugged_token</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Token(schnitzel, lemma=schnitzel, topic=FOOD)
+Token(not, lemma=not, negation)
+Token(very, lemma=very, intensifier)
+Token(tasty, lemma=tasty, topic=FOOD, rating=GOOD)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Apply-on-Rating">Apply on Rating<a class="anchor-link" href="#Apply-on-Rating">&#182;</a></h2><p>Now we have all the building blocks to apply intensifiers, diminishers and nagations on the rating. The basic idea is that when we encounter a taken with a rating and modifiers to the left of it that we can combine them until we don't find any more.</p>
+<p>To keep things tidy, here's a another little helper:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_rating_modifier</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="n">Token</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_diminisher</span> \
+        <span class="ow">or</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_intensifier</span> \
+        <span class="ow">or</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">is_negation</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2><p>The previous sentence yielded the tokens:</p>
+
+<pre><code>Token(schnitzel, lemma=schnitzel, topic=FOOD)
+Token(not, lemma=not, negation)
+Token(very, lemma=very, intensifier)
+Token(tasty, lemma=tasty, topic=FOOD, rating=GOOD)</code></pre>
+<p>We want to perform the following steps:</p>
+<ol>
+<li>Find the first rating from the left -&gt; <code>tasty(GOOD)</code></li>
+<li>Check if the token to the left is a modifer -&gt; yes: <code>very(intensifier)</code></li>
+<li>Combine them -&gt; <code>(very) tasty(VERY_GOOD)</code> and remove the left token</li>
+<li>Check if the token to the left is a modifer -&gt; yes: <code>not(negation)</code></li>
+<li>Combine them -&gt; <code>(not very) tasty(BAD)</code> and remove the left token</li>
+<li>End result: <code>not very tasty(GOOD)</code> -&gt; <code>tasty(BAD)</code></li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">combine_ratings</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="c1"># Find the first rating (if any).</span>
+    <span class="n">rating_token_index</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">token_index</span> <span class="k">for</span> <span class="n">token_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">tokens</span><span class="p">[</span><span class="n">token_index</span><span class="p">]</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">),</span>
+        <span class="kc">None</span>  <span class="c1"># Default if no rating token can be found</span>
+        
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">rating_token_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Apply modifiers to the left on the rating.</span>
+        <span class="n">original_rating_token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">rating_token_index</span><span class="p">]</span>
+        <span class="n">combined_rating</span> <span class="o">=</span> <span class="n">original_rating_token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span>
+        <span class="n">modifier_token_index</span> <span class="o">=</span> <span class="n">rating_token_index</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">modified</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Did the last iteration modify anything?</span>
+        <span class="k">while</span> <span class="n">modified</span> <span class="ow">and</span> <span class="n">modifier_token_index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">modifier_token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">modifier_token_index</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">is_intensifier</span><span class="p">(</span><span class="n">modifier_token</span><span class="p">):</span>
+                <span class="n">combined_rating</span> <span class="o">=</span> <span class="n">intensified</span><span class="p">(</span><span class="n">combined_rating</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">is_diminisher</span><span class="p">(</span><span class="n">modifier_token</span><span class="p">):</span>
+                <span class="n">combined_rating</span> <span class="o">=</span> <span class="n">diminished</span><span class="p">(</span><span class="n">combined_rating</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">is_negation</span><span class="p">(</span><span class="n">modifier_token</span><span class="p">):</span>
+                <span class="n">combined_rating</span> <span class="o">=</span> <span class="n">negated_rating</span><span class="p">(</span><span class="n">combined_rating</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># We are done, no more modifiers </span>
+                <span class="c1"># to the left of this rating.</span>
+                <span class="n">modified</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">modified</span><span class="p">:</span>
+                <span class="c1"># Discord the current modifier </span>
+                <span class="c1"># and move on to the token on the left.</span>
+                <span class="k">del</span> <span class="n">tokens</span><span class="p">[</span><span class="n">modifier_token_index</span><span class="p">]</span>
+                <span class="n">modifier_token_index</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">original_rating_token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span> <span class="o">=</span> <span class="n">combined_rating</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example-for-a-combined-rating">Example for a combined rating<a class="anchor-link" href="#Example-for-a-combined-rating">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">document</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="s1">&#39;The schnitzel is not very tasty.&#39;</span><span class="p">)</span>
+
+<span class="n">opinion_essence</span> <span class="o">=</span> <span class="n">essential_tokens</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;essential tokens:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">opinion_essence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="n">debugged_token</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+
+<span class="n">combine_ratings</span><span class="p">(</span><span class="n">opinion_essence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;combined tokens:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">opinion_essence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span> <span class="n">debugged_token</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>essential tokens:
+   Token(schnitzel, lemma=schnitzel, topic=FOOD)
+   Token(not, lemma=not, negation)
+   Token(very, lemma=very, intensifier)
+   Token(tasty, lemma=tasty, topic=FOOD, rating=GOOD)
+combined tokens:
+   Token(schnitzel, lemma=schnitzel, topic=FOOD)
+   Token(tasty, lemma=tasty, topic=FOOD, rating=SOMEWHAT_BAD)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-function-to-extract-topic-and-rating-of-a-sentence">A function to extract topic and rating of a sentence<a class="anchor-link" href="#A-function-to-extract-topic-and-rating-of-a-sentence">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>  <span class="c1"># for fancy type hints</span>
+
+<span class="k">def</span> <span class="nf">topic_and_rating_of</span><span class="p">(</span><span class="n">tokens</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Token</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Topic</span><span class="p">,</span> <span class="n">Rating</span><span class="p">]:</span>
+    <span class="n">result_topic</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">result_rating</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">opinion_essence</span> <span class="o">=</span> <span class="n">essential_tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+    <span class="c1"># print(&#39;  1: &#39;, opinion_essence)</span>
+    <span class="n">combine_ratings</span><span class="p">(</span><span class="n">opinion_essence</span><span class="p">)</span>
+    <span class="c1"># print(&#39;  2: &#39;, opinion_essence)</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">opinion_essence</span><span class="p">:</span>
+        <span class="c1"># print(debugged_token(token))</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">result_topic</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="n">result_topic</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">topic</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">result_rating</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="n">result_rating</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">rating</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">result_topic</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">result_rating</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">result_topic</span><span class="p">,</span> <span class="n">result_rating</span>
+
+<span class="n">sentence</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">nlp_en</span><span class="p">(</span><span class="s1">&#39;The schnitzel is not very tasty.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sents</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">topic_and_rating_of</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The schnitzel is not very tasty.
+(&lt;Topic.FOOD: 2&gt;, &lt;Rating.SOMEWHAT_BAD: -1&gt;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-function-to-extract-opinions-from-feedback">A function to extract opinions from feedback<a class="anchor-link" href="#A-function-to-extract-opinions-from-feedback">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">opinions</span><span class="p">(</span><span class="n">feedback_text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">feedback</span> <span class="o">=</span> <span class="n">nlp_en</span><span class="p">(</span><span class="n">feedback_text</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">tokens</span> <span class="ow">in</span> <span class="n">feedback</span><span class="o">.</span><span class="n">sents</span><span class="p">:</span>
+        <span class="k">yield</span><span class="p">(</span><span class="n">topic_and_rating_of</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">feedback_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">The schnitzel was not very tasty. </span>
+<span class="s2">The waiter was polite.</span>
+<span class="s2">The football game ended 2:1.&quot;&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">topic</span><span class="p">,</span> <span class="n">rating</span> <span class="ow">in</span> <span class="n">opinions</span><span class="p">(</span><span class="n">feedback_text</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="n">rating</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Topic.FOOD Rating.SOMEWHAT_BAD
+Topic.SERVICE Rating.GOOD
+None None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In summary:</p>
+<ul>
+<li>Food needs improvement, Service is fine.</li>
+<li>Football results are of no interest to us.</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Enough-with-the-code!">Enough with the code!<a class="anchor-link" href="#Enough-with-the-code!">&#182;</a></h2><p><img src="images/mind_blown.jpg" alt="mind blown"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What's-next?">What's next?<a class="anchor-link" href="#What's-next?">&#182;</a></h2><p>Plenty!</p>
+<ul>
+<li>modals: "could", "should" -&gt; typically indicate a negative rating</li>
+<li>idioms that indicate rating, for example "Leaves a lot to be desired"</li>
+<li>back references: "he" (the waiter), "it" (the schnitzel) -&gt; use topic from previous sentence if no other topic is given</li>
+<li>add a topic hierarchy, for example <code>tasty</code> is about <code>food.taste</code></li>
+<li>Instead of careful handmade functions like <code>combine_rating()</code> use abstract rules that can be processed by a rule engine</li>
+<li>...and all the other linguist jazz!</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Neverthess: the simple algorithm presented gets &gt; 80% of feedback for inkeepers right. Which is good enough for its indended purpose of finding areas of interest that need further examination.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Special-topics">Special topics<a class="anchor-link" href="#Special-topics">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Emojis">Emojis<a class="anchor-link" href="#Emojis">&#182;</a></h2><ul>
+<li>unify unicode emojis, western smileys and eastern smileys</li>
+<li>assign rating to the them</li>
+<li>Emojis in spaCy: <a href="https://github.com/ines/spacymoji">https://github.com/ines/spacymoji</a></li>
+<li>List of unicode emojis with suggested rating: <a href="http://www.unicode.org/emoji/charts/full-emoji-list.html">http://www.unicode.org/emoji/charts/full-emoji-list.html</a> (You still need to adjust it for your needs.)</li>
+</ul>
+
 </div>
 </div>
 </div></section><section>
@@ -12984,10 +14283,42 @@ good
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Slang-terms">Slang terms<a class="anchor-link" href="#Slang-terms">&#182;</a></h2><ul>
 <li>German vs Austrian</li>
-<li><p>English vs Scottish</p>
-</li>
-<li><p>TODO: elaborate</p>
-</li>
+<li>English vs Scottish</li>
+<li>Preprocess and replace using synonyms.</li>
+<li>Only for sentiment relevant terms.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">AUSTRIAN_TO_GERMAN_SYONYM_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;nix&#39;</span><span class="p">:</span> <span class="s1">&#39;nichts&#39;</span><span class="p">,</span>   <span class="c1"># nothing</span>
+    <span class="s1">&#39;ois&#39;</span><span class="p">:</span> <span class="s1">&#39;alles&#39;</span><span class="p">,</span>    <span class="c1"># everything</span>
+    <span class="s1">&#39;kana&#39;</span><span class="p">:</span> <span class="s1">&#39;keiner&#39;</span><span class="p">,</span>  <span class="c1"># no one (more eastern parts)</span>
+    <span class="s1">&#39;koana&#39;</span><span class="p">:</span> <span class="s1">&#39;keiner&#39;</span><span class="p">,</span> <span class="c1"># no one (more western parts)</span>
+    <span class="c1"># ...</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unknown-abbreviations">Unknown abbreviations<a class="anchor-link" href="#Unknown-abbreviations">&#182;</a></h2><ul>
+<li>example for know abbreviation: "resp." (respectively)</li>
+<li>breaks sentence detection</li>
+<li>if common: contribute to spaCy: module <code>tokenizer_exceptions</code></li>
+<li>if uncommon: add synonym for expanded form as preprocessing step</li>
 </ul>
 
 </div>
@@ -12998,13 +14329,13 @@ good
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Typos">Typos<a class="anchor-link" href="#Typos">&#182;</a></h2><ul>
-<li>not relevant for topics and ratings: ignore</li>
+<li>if word is not relevant for topics and ratings: ignore</li>
 <li>common typos: use synonyms (similar to slang terms)</li>
 <li>uncommon typos:<ul>
 <li>Is this really a thing?</li>
 <li>Mobile input correction to the rescue</li>
 <li>If you must:<ul>
-<li>fuzzy search in lexicon</li>
+<li>fuzzy search in lexicon, for example: <a href="https://github.com/seatgeek/fuzzywuzzy">https://github.com/seatgeek/fuzzywuzzy</a></li>
 <li>spelling dictionary (independent of lexicon)</li>
 </ul>
 </li>
@@ -13015,15 +14346,32 @@ good
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Emojis">Emojis<a class="anchor-link" href="#Emojis">&#182;</a></h2>
+<h1 id="References">References<a class="anchor-link" href="#References">&#182;</a></h1><ul>
+<li>Liu (2015) - Bing Liu. Sentiment Analysis. Cambridge, MA: Cambridge University Press, 2015.</li>
+<li>Montani (2017) - Ines Montani. Introducing custom pipelines and extensions for spaCy v2.0. <a href="https://explosion.ai/blog/spacy-v2-pipelines-extensions">https://explosion.ai/blog/spacy-v2-pipelines-extensions</a>.</li>
+</ul>
+
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1><ul>
+<li>Sentiment analysis is challenging.</li>
+<li>Python and spaCy help a lot with the development part.</li>
+<li>Code complexity can remain managable.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section>
 </div>
 </div>
 
