@@ -52,3 +52,6 @@ nosetests.xml
 .idea/
 /pygraz/pygments/example.html
 /pygraz/pygments/example.rtf
+
+# Jupyther notebooks
+.ipynb_checkpoints
