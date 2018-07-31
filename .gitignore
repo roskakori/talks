@@ -51,6 +51,7 @@ nosetests.xml
 .~lock.*
 .env
 .idea/
+.ipynb_checkpoints
 /pygraz/pygments/example.html
 /pygraz/pygments/example.rtf
 
