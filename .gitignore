@@ -1,6 +1,7 @@
 # Various talk dependant files
 europython_2014/errorhandling/copy_of_some.txt
 europython_2014/errorhandling/some.txt
+pygraz/traderbot/demobot.cfg
 
 # Python byte code
 *.py[cod]
