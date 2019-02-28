@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Setup Python environment
 set -e
 set -x
