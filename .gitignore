@@ -60,3 +60,4 @@ nosetests.xml
 # Jupyther notebooks
 .ipynb_checkpoints
 /pygraz/helpful_logging_with_python/customers.txt
+/linuxtage/Introduction to natural language processing/articles.csv
