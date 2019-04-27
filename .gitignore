@@ -61,3 +61,6 @@ nosetests.xml
 .ipynb_checkpoints
 /pygraz/helpful_logging_with_python/customers.txt
 /linuxtage/Introduction to natural language processing/articles.csv
+/linuxtage/Introduction to natural language processing/article_corpus.mm
+/linuxtage/Introduction to natural language processing/articles.dict
+/linuxtage/Introduction to natural language processing/article_corpus.mm.index
