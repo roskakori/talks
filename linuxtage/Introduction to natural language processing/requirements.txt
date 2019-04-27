@@ -1,5 +1,6 @@
+gensim>=3.7.2
 jupyter
 matplotlib>=3.0.3
-spacy
+spacy>=2.0.0
 vaderSentiment
 wordcloud>=1.5.0
