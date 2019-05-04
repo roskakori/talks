@@ -1,0 +1,5 @@
+@startuml
+Server -> "REST Framework": raise Exception
+"REST Framework" -> Client: HTTP Response (4xx, 5xx)
+Server -> Server: log error
+@enduml
