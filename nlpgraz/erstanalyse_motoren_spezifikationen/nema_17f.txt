@@ -1,0 +1,116 @@
+Nema 17
+
+
+
+Quick Reference 
+ NEMA size 17 1.8° 2-phase stepper motor 
+
+
+
+
+Mechanical Specifications
+Dimensions in inches (mm) 
+Optional rear shaft 
+Flat extends to rear end bell
+
+
+Notes and Warnings 
+
+Installation, configuration and maintenance must be carried out by qualified technicians only
+
+
+
+
+ You must have detailed information to be able to carry out this work. 
+
+
+ Unexpected dangers may be encountered when working with this product! 
+
+
+ Incorrect use may destroy this product and connected components!
+
+
+
+
+For more information, go to www.imshome.com 
+
+Specifications_x000D_ 
+1.5 Amp motors
+Single length 
+Double length
+Triple length 
+Part number
+Holding torque oz-in N-cm 
+
+Detent torque oz-in  N-cm 
+
+Rotor inertia oz-in-sec2 kg-cm2 
+
+Weight oz  grams 
+
+Phase current amps 
+Phase resistance ohms 
+Phase inductance mH 
+
+FRONT VIEW
+REAR VIEW (Reduced) 
+Motor stack length inches (mm) 
+
+
+Wiring and Connections
+
+Signals and wire colors 
+
+Phase A Red 
+Phase /A Blue
+Phase B Green 
+Phase /B Black 
+
+
+Part Numbers
+Example: 
+Stepper motor frame size M - 17  =  NEMA 17 (1.7” / 42 mm) 
+
+Motor length 13 -  =  single stack 15 -  =  double stack 19 -  =  triple stack 
+
+
+
+Phase current 1.5 = 1.5 Amps 
+Shaft S = single, front shaft only D = double, front and rear shafts 
+
+
+Optional optical encoder 
+ES = Single-end ED = Differential 
+
+Line count 
+
+Torque-speed performance
+Measured at 1.5 Amps RMS 
+Torque in oz-in (N-cm)
+Speed in full steps per second (rpm) 
+
+Optical Encoder Option 
+Dimensions in inches (mm)
+Connectivity
+single-end encoder 
+wire 1   Brown   2   Violet   3   Blue  4 Orange   5   Yellow 
+function 
+ Ground      Index     Channel A    +5 VDC input Channel B_x000D_ 
+ differential encoder
+pin  function 
+optional interface cable available: ES-CABLE-2 
+
+interface cable included 
+
+Parameter 
+Cycle error 
+Symmetry 
+Quadrature 
+Index pulse width 
+Index rise (after Ch A or B rise
+Index fall (after Ch A or B fall
+One cycle: 360 electrical degrees (ºe). 
+
+Symmetry:  the measure of the relationship between X and Y, nominally 180ºe. 
+Quadrature: the phase lead or lag between channels A and B, nominally 90ºe.
+Index pulse width, nominally 90 ºe.
