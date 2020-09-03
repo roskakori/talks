@@ -51,11 +51,14 @@ nosetests.xml
 
 # LibreOffice locks
 .~lock.*
+
 .env
 .idea/
 .ipynb_checkpoints
 /pygraz/pygments/example.html
 /pygraz/pygments/example.rtf
+
+venv
 
 # Jupyther notebooks
 .ipynb_checkpoints
@@ -64,3 +67,5 @@ nosetests.xml
 /linuxtage/Introduction to natural language processing/article_corpus.mm
 /linuxtage/Introduction to natural language processing/articles.dict
 /linuxtage/Introduction to natural language processing/article_corpus.mm.index
+
+
