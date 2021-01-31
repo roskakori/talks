@@ -1,3 +1,19 @@
+2021-01-31
+----------
+
+* 02/03 Backlog und Priorisierung
+  * Prioisieren mit ICE-Scoring ergänzt
+  * Prioisieren mit Story Maps ergänzt
+
+* 04/06 Kanban Metriken und Service Level
+  * Scrum SLA präzisiert: Aufgaben vs Sprint-Ziele
+  * Zusammenfassung vervollständigt.
+
+* 04/11 Verbesserung im widrigen Umfeld
+  * Folie zu Gelassenheit ergänzt
+  * Folie zu innerem Antrieb ergänzt
+  
+
 2021-01-29
 ----------
 
