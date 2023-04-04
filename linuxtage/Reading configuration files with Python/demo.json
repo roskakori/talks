@@ -1,0 +1,13 @@
+{
+  "color": "0x123456",
+  "customers": [
+    {
+      "name": "John Smith",
+      "born": 1967
+    },
+    {
+      "name": "Mary Webster",
+      "born": 1979
+    }
+  ]
+}
