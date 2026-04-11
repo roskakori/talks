@@ -1,4 +1,4 @@
-# Linux statt Windows zum Gaming
+# Gaming mit Linux statt Windows - Wie gut geht das?
 
 Video: https://pretalx.linuxtage.at/glt26/talk/AWDEN3/.
 
