@@ -1,0 +1,21 @@
+# By default assume text
+* text=auto
+
+*.css text
+*.graphql text
+*.js text
+*.html text
+*.po text
+*.py text
+*.toml text
+*.yaml text
+
+# Always use LF even on Windows
+*.sh text eol=lf
+
+# Binary files
+*.key binary
+*.ods binary
+*.png binary
+*.jpg binary
+*.xlsx binary
