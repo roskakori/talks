@@ -25,13 +25,13 @@ To set up the local Python environment:
 1. Install [uv](https://docs.astral.sh/uv/).
 2. Run:
    ```bash
-   uv synx --all-packages
+   uv sync --all-packages
    ```
 
 To run the demo script:
 
 ```bash
-uv run demo
+uv run build_demo_app
 ```
 
 This script asks various LLMs to build a web app and output some statistics. The app is a single HTML and can be found in `src/demo/generated`. It computes costs of local inference.
@@ -42,4 +42,4 @@ Some Python functions have been generated with AI. Humans have reviewed all of t
 
 ## License
 
-[AI coding Graz: Local inference](https://github.com/roskakori/talks) © 2026 by [Thomas Aglassinger](https://roskakori.at) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+[#2 AI coding meetup Graz: Local inference](https://github.com/roskakori/talks) © 2026 by [Thomas Aglassinger](https://roskakori.at) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
